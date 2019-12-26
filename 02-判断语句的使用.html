@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>判断语句的使用</title>
+</head>
+
+<body>
+    <script>
+        // 弹出两个输入框，让用户输入两个值
+        var n1 = prompt('请输入第一个数字');
+        var n2 = prompt('请输入第二个数字');
+        // 将输入框中的字符串转换为数字类型再进行比较
+        n1 = parseInt(n1);
+        n2 = parseInt(n2);
+        // 先判断两个值里其中是否有不是数字
+        // isNaN()的作用就是用来判断值是否不是数字
+        // 如果isNaN()判断出是数字，则返回false;如果isNaN()判断出不是数字，则返回true;
+        if (isNaN(n1) === false && isNaN(n2) === false) {
+            // 两个值都是数字才能进行下一步的比较
+            // 再判断两个数字哪个更大
+            if (n1 > n2) {
+                alert('第一个数字比第二个数字大，最大的是'+n1)
+            } else if (n1 === n2) {
+                alert('两个数字一样大，他们都是'+n1)
+            } else {
+                alert('第二个数字比第一个数字大，最大的是'+n2)
+            }
+        } else {
+            alert('别闹了,你输入某一个不是数字，请你再次刷新页面重试')
+        }
+    </script>
+</body>
+
+</html>
